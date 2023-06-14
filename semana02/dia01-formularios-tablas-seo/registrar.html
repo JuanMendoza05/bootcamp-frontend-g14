@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
+  <title>Registro 01</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
   <style>
     main {
@@ -13,38 +13,38 @@
       align-items: center;
       min-height: 100vh;
     }
+    .flex-container {
+      display: flex;
+      justify-content: space-between;
+    }
+    .field-nom {
+      margin-right: 20px;
+    }
   </style>
 </head>
 <body>
   <main class="container">
     <form>
+      <img src="https://placehold.co/80.png?text={vv}" />
       <hgroup>
-        <h1>Login</h1>
-        <h2>Ingresa la información con la que te registraste.</h2>
+        <h1>Crea una cuenta</h1>
+        <h2>Ingresa la siguiente información para registraste.</h2>
       </hgroup>
-      <label>
-        Email
-        <input type="email" placeholder="user@gmail.com" required />
-      </label>
-      <label>
-        Password
-        <input type="password" placeholder="Ingresa tu password" required minlength="6" />
-      </label>
+      <div class="flex-container">
+        <input type="text" class="field-nom" placeholder="Nombres">
+        <input type="text" placeholder="Apellidos">
+      </div>
 
-      <label>
-        <input type="checkbox" name="remember" />
-        Recuérdame
-      </label>
+      <div><input type="email" placeholder="user@gmail.com" required /></div>
 
-      <input type="submit" value="Ingresar" />
+      <div><input type="tel" placeholder="Teléfono" required /></div>
 
-      <p>
-        No recuerdas tu contraseña? <a href="registrar.html">Recuperala aquí</a>
-      </p>
+      <div><input type="password" placeholder="Password" required /></div>
 
-      <p>
-        No tienes una cuenta? <a href="registrar.html">Registrate aquí</a>
-      </p>
+      <div><input type="password" placeholder="Confirmar password" required /></div>
+      <div><input type="submit" value="Registrarse" /></div>
+      <p>Ya tienes una cuenta? <a href="registrar.html">Accede desde aquí</a></p>
+
     </form>
   </main>
 </body>
